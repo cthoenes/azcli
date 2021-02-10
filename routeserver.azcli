@@ -28,7 +28,7 @@ az network vnet subnet create -n GatewaySubnet --address-prefix $gw_subnet_prefi
 
 # Create Route Server
 subnet_id=$(az network vnet subnet show -n $subnet_name --vnet-name $vnet_name -g $rg --query id -o tsv)
-az network vrouter create -n $vr_name -g $rg --hosted-subnet $subnet_id -l $location --no-wait
+az network vrouter create -n $vr_name -g $rg --hosted-subnet $subnet_id -l $location
 
 # Get info (once created)
 vr_ip1=$(az network vrouter show -n $vr_name -g $rg --query 'virtualRouterIps[0]' -o tsv) && echo $vr_ip1
