@@ -1,7 +1,7 @@
 # variables
 rg=routeserver
 location=westeurope
-vnet_name=routeserver
+vnet_name=RouteServerSubnet
 vnet_prefix=10.0.0.0/16
 subnet_name=routeserver
 subnet_prefix=10.0.0.0/24
